@@ -1,0 +1,105 @@
+halfcheetah-medium-expert-v2:
+  lr_actor: 0.0003
+  lr_critic: 0.00005
+  eta: 0.02
+  tau: 0.005
+  grad_norm: 5.0
+  top_k: 0
+  n_quantiles: 32
+  emb_dim: 128
+  q_clip_range: [-300.0, 300.0]
+  lambda_bc: 1.0
+  eta_warmup_steps: 0
+  alpha: 0.1
+  max_vel: 10.0
+  prob_vel_penal: 0.05
+  cost_vel: -70.0
+
+halfcheetah-medium-replay-v2:
+  lr_actor: 0.0003
+  lr_critic: 0.00005
+  eta: 0.02
+  tau: 0.005
+  grad_norm: 5.0
+  top_k: 0
+  n_quantiles: 16
+  emb_dim: 64
+  q_clip_range: [-300.0, 300.0]
+  lambda_bc: 1.0
+  eta_warmup_steps: 0
+  alpha: 0.1
+  max_vel: 5.0
+  prob_vel_penal: 0.05
+  cost_vel: -60.0
+
+hopper-medium-expert-v2:
+  lr_actor: 0.0003
+  lr_critic: 0.00001
+  eta: 0.05
+  tau: 0.005
+  grad_norm: 5.0
+  top_k: 0
+  n_quantiles: 16
+  emb_dim: 64
+  q_clip_range: [-300.0, 300.0]
+  lambda_bc: 1.0
+  eta_warmup_steps: 300000
+  alpha: 0.1
+  prob_pose_penal: 0.1
+  cost_pose: -50.0
+  healthy_angle_range: [-0.17, 0.04]
+  done_if_exceed_factor: 100.0
+
+hopper-medium-replay-v2:
+  lr_actor: 0.0003
+  lr_critic: 0.00001
+  eta: 0.05
+  tau: 0.005
+  grad_norm: 5.0
+  top_k: 0
+  n_quantiles: 16
+  emb_dim: 64
+  q_clip_range: [-150.0, 150.0]
+  lambda_bc: 1.5
+  eta_warmup_steps: 300000
+  alpha: 0.1
+  prob_pose_penal: 0.1
+  cost_pose: -50.0
+  healthy_angle_range: [-0.1, 0.1]
+  done_if_exceed_factor: 2.0
+
+walker2d-medium-expert-v2:
+  lr_actor: 0.0003
+  lr_critic: 0.00001
+  eta: 0.05
+  tau: 0.005
+  grad_norm: 5.0
+  top_k: 1
+  n_quantiles: 16
+  emb_dim: 64
+  q_clip_range: [-300.0, 300.0]
+  lambda_bc: 1.5
+  eta_warmup_steps: 300000
+  alpha: 0.1
+  prob_pose_penal: 0.1
+  cost_pose: -30.0
+  healthy_angle_range: [-0.5, 0.5]
+  done_if_exceed_factor: 2.0
+
+walker2d-medium-replay-v2:
+  lr_actor: 0.0003
+  lr_critic: 0.000005
+  eta: 0.02
+  tau: 0.005
+  grad_norm: 3.0
+  top_k: 1
+  n_quantiles: 8
+  emb_dim: 32
+  q_clip_range: [-300.0, 300.0]
+  lambda_bc: 1.0
+  eta_warmup_steps: 300000
+  alpha: 0.1
+  prob_pose_penal: 0.1
+  cost_pose: -30.0
+  healthy_angle_range: [-0.5, 0.5]
+  done_if_exceed_factor: 2.0

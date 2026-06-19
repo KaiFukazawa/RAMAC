@@ -1,0 +1,8 @@
+env_name: hopper-medium-replay-v2
+output_file: dataset/hopper-medium-replay-v2-risky.hdf5
+wrapper:
+  type: pose
+  prob_pose_penal: 0.1
+  cost_pose: -50.0
+  healthy_angle_range: [-0.1, 0.1]
+  done_if_exceed_factor: 2.0

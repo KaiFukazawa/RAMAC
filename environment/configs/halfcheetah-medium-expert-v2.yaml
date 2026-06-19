@@ -1,0 +1,7 @@
+env_name: halfcheetah-medium-expert-v2
+output_file: dataset/halfcheetah-medium-expert-v2-risky.hdf5
+wrapper:
+  type: velocity
+  max_vel: 10.0
+  prob_vel_penal: 0.05
+  cost_vel: -70.0

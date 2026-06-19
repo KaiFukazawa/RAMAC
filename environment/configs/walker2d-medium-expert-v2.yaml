@@ -1,0 +1,8 @@
+env_name: walker2d-medium-expert-v2
+output_file: dataset/walker2d-medium-expert-v2-risky.hdf5
+wrapper:
+  type: pose
+  prob_pose_penal: 0.1
+  cost_pose: -30.0
+  healthy_angle_range: [-0.5, 0.5]
+  done_if_exceed_factor: 2.0
